@@ -1,10 +1,10 @@
 FROM alpine:latest
 
-MAINTAINER Jose l. Azagra <azagramac@gmail.com>
+MAINTAINER angel <ugeekpodcast@gmail.com>
 
 RUN apk add --no-cache sudo bash openrc openssh \
   && sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
-  && echo "root:EnterTheMatrix" | chpasswd \
+  && echo "root:EntraenlaMatrix" | chpasswd \
   && rm -rf /var/cache/apk/*
 
 RUN sed -ie 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
